@@ -6,6 +6,20 @@
 - **`bet-maker`** — сервис для приёма ставок пользователей на события
 
 
+## Развертывание
+
+
+Перед развертыванием убедитесь, что файл .env составлен корректно, пример:
+
+```bash 
+DB_URL = "postgresql+asyncpg://postgres:postgres@db:5432/bets"
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB=postgres
+```
+
+Для запуска проекта используйте команду: ```docker-compose up --build```
+
+
 ## Сервисы
 
 ### line-provider
@@ -37,18 +51,3 @@
 - `event_id`
 - `amount`
 - `status`: `PENDING`, `WIN`, `LOSE`
-
-
-
-## Развертывание
-
-
-Перед развертыванием убедитесь, что файл .env составлен корректно, пример:
-
-```bash 
-DB_URL = "postgresql+asyncpg://postgres:postgres@db:5432/bets"
-POSTGRES_PASSWORD=postgres
-POSTGRES_DB=postgres
-```
-
-Для запуска проекта используйте команду: ```docker-compose up --build ```
